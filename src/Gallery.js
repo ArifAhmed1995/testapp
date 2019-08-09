@@ -3,7 +3,6 @@ import React from 'react';
 class Gallery extends React.Component {
   constructor(props) {
     super(props);
-    console.log(props);
     this.state = { currentIndex: null , shows: []};
     this.imgUrls = [];
     this.renderImageContent = this.renderImageContent.bind(this);
@@ -43,7 +42,7 @@ class Gallery extends React.Component {
     let airtime = show_info.airtime;
     return (
       <div onClick={(e) => this.openModal(e, index)}>
-        <img src={src} key={src} height="210" width="240"/>
+        <img src={src} key={src}/>
         <br></br>{show_name}<br></br>{ep_name}
         <br></br>Episode Number : {ep_number}
         <br></br>Airing on : {network}<br></br>{ep_name}
@@ -72,16 +71,15 @@ class Gallery extends React.Component {
     {
         if(
             (total_shows[index].show.name.toLowerCase().search(sq.toLowerCase())
-                && total_shows[index].name.toLowerCase().search(sq.toLowerCase())
-                && total_shows[index].show.network.name.toLowerCase().search(sq.toLowerCase())
-                && total_shows[index].number.toString(10).toLowerCase().search(sq.toLowerCase())
-                && total_shows[index].airdate.toLowerCase().search(sq.toLowerCase())
-                && total_shows[index].airtime.toLowerCase().search(sq.toLowerCase())
+                || total_shows[index].name.toLowerCase().search(sq.toLowerCase())
+                || total_shows[index].show.network.name.toLowerCase().search(sq.toLowerCase())
+                || total_shows[index].number.toString(10).toLowerCase().search(sq.toLowerCase())
+                || total_shows[index].airdate.toLowerCase().search(sq.toLowerCase())
+                || total_shows[index].airtime.toLowerCase().search(sq.toLowerCase())
             ) !== -1
         )
             filtered_shows.push(total_shows[index]);
     }
-    console.log(filtered_shows);
     if(filtered_shows.length !== 0)
     {
         filtered_shows.sort(function(a, b){return b.show.rating.average - a.show.rating.average;});
