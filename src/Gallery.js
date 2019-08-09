@@ -70,13 +70,12 @@ class Gallery extends React.Component {
     for(let index = 0;index < this.state.shows.length;index++)
     {
         if(
-            (total_shows[index].show.name.toLowerCase().search(sq.toLowerCase())
-                || total_shows[index].name.toLowerCase().search(sq.toLowerCase())
-                || total_shows[index].show.network.name.toLowerCase().search(sq.toLowerCase())
-                || total_shows[index].number.toString(10).toLowerCase().search(sq.toLowerCase())
-                || total_shows[index].airdate.toLowerCase().search(sq.toLowerCase())
-                || total_shows[index].airtime.toLowerCase().search(sq.toLowerCase())
-            ) !== -1
+            total_shows[index].show.name.toLowerCase().search(sq.toLowerCase()) !== -1
+              || total_shows[index].name.toLowerCase().search(sq.toLowerCase()) !== -1
+              || total_shows[index].show.network.name.toLowerCase().search(sq.toLowerCase()) !== -1
+              || total_shows[index].number.toString(10).toLowerCase().search(sq.toLowerCase()) !== -1
+              || total_shows[index].airdate.toLowerCase().search(sq.toLowerCase()) !== -1
+              || total_shows[index].airtime.toLowerCase().search(sq.toLowerCase()) !== -1
         )
             filtered_shows.push(total_shows[index]);
     }
