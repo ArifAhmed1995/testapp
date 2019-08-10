@@ -58,6 +58,7 @@ class Gallery extends React.Component {
                 </div>
               )
     }
+    // TODO : The screen breaks up into many blue rectangles but should be one gradient color instead.
     return (<div className="blank-page"><text>No shows found :(</text></div>);
     }
 }
