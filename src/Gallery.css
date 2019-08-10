@@ -1,5 +1,3 @@
-*, *:before, *:after { box-sizing: border-box; }
-
 html {
   font-size: 16px;
 }
@@ -8,142 +6,37 @@ body {
   font-family: helvetica;
   position: relative;
   font-size: 100%;
-  background: rgb(27, 27, 26);
-  background: -webkit-linear-gradient(to right, rgb(173, 171, 169), rgb(156, 139, 139));
-  background: linear-gradient(to right, rgb(160, 195, 206), rgb(81, 104, 110));
-}
-.gallery-container {
-  padding: .9375rem 0;
+  background: linear-gradient(to bottom right, rgb(166, 190, 28), rgb(1, 189, 73));
 }
 
 .gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 3fr);
-  grid-gap: 50px;
-  grid-column-gap: 215px;
-  width: 100%;
-  
-  @include bp( x-small ) {
-    grid-template-columns: repeat(1, 1fr);
-  }	  
-  @include bp( small ) {
-    grid-template-columns: repeat(2, 1fr);
-  }	
-
-  @include bp( large ) {
-    grid-template-columns: repeat(3, 1fr);
-  }	
-  img {
-    max-width: 100%;
-    height: auto;
-    border: 1px solid #fff;
-  }
-}
-.gallery-grid div {
-  position: relative;
   cursor: pointer;
-  &:before, &:after {
-    transition: .3s opacity ease;
-    opacity: 0;
-  }
-  &:after {
-    content: '\02194';
-    font-size: 80px;
-    position: absolute;
-    transform: translate3d(-50%, -50%, 0) rotate(-45deg);
-    color: rgb(146, 82, 82);
-    left: 50%;
-    top: 50%;
-    display: block;
-  }
-  &:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 4px;
-    left: 0;
-    right: 0;
-    background: rgba(rgb(155, 104, 104), 0.5);
-    display: block;
-  }
-  &:hover {
-    &:before, &:after {
-      opacity: 1;
-      transition: .3s opacity ease;
-    }
-  }
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: center;
 }
 
-.text-data-show {
-  font-family:georgia,garamond,serif;
-  font-size:20px;;
+.tvshow-data {
+  font-family: serif;
+  font-size:16px;
   line-height: 2ch;
-  color: brown;
-  background-color: rgb(167, 184, 189);
+  color: white;
 }
 
-.modal {
-  position: fixed;
-  z-index: 999;
-  width: 50%;
-  max-width: 800px;
-  top: 50%;
-  left: 50%;
-  transform: translate3d(-50%, -50%, 0);
-  @include bp( x-small ) {
-    width: 95%;
-  }	  
-  @include bp( small ) {
-    width: 80%;
-  }	
-  @include bp( large ) {
-    width: 60%;
-  }	
-  img {
-    max-width: 60%;
-    border: 5px solid #fff;
-  }
-}
-
-.modal-overlay {
-  position: fixed;
-  z-index: 1;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  top: 0;
-  left: 0;
-}
-.modal-body a {
-  position: absolute;
-  display: inline;
-  color: $black;
-  text-decoration: none;
-  line-height: 36px;
-  font-size: 30px;
-  font-weight: lighter;
-  background: #fff;
-  border-radius: 5px;
-  height: 40px; width: 40px;
-  text-align: center;
-}
-.modal-body .modal-close {
-  right: 0; top: 0;
-  border-radius: 0 0 0 5px;
-}
-.modal-body .modal-next,
-.modal-body .modal-prev {
-  right: 0; top: calc(50% - 25px);
-  border-radius: 5px 0 0 5px;
-  height: 50px;
-  line-height: 40px;
-  font-size: 60px;
-}
-.modal-body .modal-prev {
-  left: 0;
-  right: auto;
-  border-radius: 0 5px 5px 0;
-}
-.modal-body {
+.poster {
   position: relative;
+}
+
+.tvshow-details {
+  position: relative;
+}
+
+.episode-name {
+  font-size: 20px;
+  color: #fff;
+  font-weight: bold;
+  font-family: Helvetica;
+  text-shadow: 0 1px 0 #ccc;
 }
