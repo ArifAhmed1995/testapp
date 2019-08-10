@@ -9,8 +9,8 @@ body {
   position: relative;
   font-size: 100%;
   background: rgb(27, 27, 26);
-  background: -webkit-linear-gradient(to right, rgb(109, 107, 105), rgb(185, 181, 181));
-  background: linear-gradient(to right, rgb(151, 151, 151), rgb(253, 252, 252));
+  background: -webkit-linear-gradient(to right, rgb(173, 171, 169), rgb(156, 139, 139));
+  background: linear-gradient(to right, rgb(160, 195, 206), rgb(81, 104, 110));
 }
 .gallery-container {
   padding: .9375rem 0;
@@ -19,8 +19,8 @@ body {
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(5, 3fr);
-  grid-gap: 100px;
-  grid-column-gap: 1px;
+  grid-gap: 50px;
+  grid-column-gap: 215px;
   width: 100%;
   
   @include bp( x-small ) {
@@ -34,7 +34,7 @@ body {
     grid-template-columns: repeat(3, 1fr);
   }	
   img {
-    max-width: 60%;
+    max-width: 100%;
     height: auto;
     border: 1px solid #fff;
   }
@@ -51,7 +51,7 @@ body {
     font-size: 80px;
     position: absolute;
     transform: translate3d(-50%, -50%, 0) rotate(-45deg);
-    color: #fff;
+    color: rgb(146, 82, 82);
     left: 50%;
     top: 50%;
     display: block;
@@ -63,7 +63,7 @@ body {
     bottom: 4px;
     left: 0;
     right: 0;
-    background: rgba(#222, 0.5);
+    background: rgba(rgb(155, 104, 104), 0.5);
     display: block;
   }
   &:hover {
@@ -72,6 +72,14 @@ body {
       transition: .3s opacity ease;
     }
   }
+}
+
+.text-data-show {
+  font-family:georgia,garamond,serif;
+  font-size:20px;;
+  line-height: 2ch;
+  color: brown;
+  background-color: rgb(167, 184, 189);
 }
 
 .modal {
