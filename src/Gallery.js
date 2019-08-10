@@ -12,22 +12,33 @@ class Gallery extends React.Component {
     let src = show_info.show.image.medium;
     let ep_name = show_info.name;
     let ep_number = (show_info.number === null) ? "Not Available" : show_info.number;
-
     let network = (show_info.show.network === null) ? show_info.show.webChannel.name : show_info.show.network.name;
-
-    let airdate = show_info.airdate;
     let airtime = show_info.airtime;
-
+    let season = show_info.season;
     return (
       <div className="tvshow-data" onClick={(e) => this.thumbnailShowClicked(e, show_info.url)}>
         <div className="poster">
           <img src={src} key={src}/>
           <div className="tvshow-details">
-            <div class="episode-name">
+            <div className="season-ep">
+            {season}
+            {
+              ep_number !== "Not Available" &&
+              <text>
+                x{ep_number}
+              </text> 
+            }
+            </div>
+            <div className="episode-name">
               {ep_name}  
             </div>
-            Episode Number : {ep_number}Airing on : {network}<br></br>{ep_name}
-            Date : {airdate}Time : {airtime}
+            <div className='network-name'>
+              {network}
+            </div>
+            <div className='time-date-info'>
+                Today, {new Date('1970-01-01T' + airtime + 'Z').toLocaleTimeString({},
+                        {timeZone:'UTC',hour12:true,hour:'numeric',minute:'numeric'})}
+            </div>
           </div>
         </div>
       </div>
@@ -47,7 +58,7 @@ class Gallery extends React.Component {
                 </div>
               )
     }
-    return null;
+    return (<div className="blank-page"><text>No shows found :(</text></div>);
     }
 }
 

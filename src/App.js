@@ -2,7 +2,6 @@ import React from 'react';
 import './App.css';
 import Gallery from './Gallery'
 import './Gallery.css';
-import { stringLiteral } from '@babel/types';
 
 class App extends React.Component
 {
@@ -59,11 +58,13 @@ class App extends React.Component
   }
 
   render() {
+    let fs = this.sortShows();
     return (
       <div>
         <div align="middle">
+          <header className="App-header">
           <br></br>
-           <strong className="search-text">Search : </strong><input
+           <strong className="search-text">Search </strong><input
                 className="input-textbox"
                 type="text"
                 name="showSearch"
@@ -71,8 +72,9 @@ class App extends React.Component
                 onKeyUp={this.filterShows}></input>
             <br></br>
             <br></br>
+          </header>
         </div>
-          <Gallery shows={this.sortShows()} />
+        <Gallery shows={fs} /> 
       </div>
     );
   }

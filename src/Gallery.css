@@ -6,37 +6,80 @@ body {
   font-family: helvetica;
   position: relative;
   font-size: 100%;
-  background: linear-gradient(to bottom right, rgb(166, 190, 28), rgb(1, 189, 73));
+  background: linear-gradient(to bottom right, rgb(0, 0, 0), rgb(62, 162, 255));
 }
 
 .gallery-grid {
-  cursor: pointer;
+  padding: 15px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
-  align-content: center;
-}
-
-.tvshow-data {
-  font-family: serif;
-  font-size:16px;
-  line-height: 2ch;
-  color: white;
+  row-gap: 20px;
+  justify-content: space-evenly;
 }
 
 .poster {
-  position: relative;
+  cursor: pointer;
+  background: linear-gradient(to bottom left, rgb(151, 196, 202), rgb(238, 191, 220));
+  height: 550px;
+  width: 210px;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+.tvshow-data {
+  cursor: pointer;
+  font-family: serif;
+  font-size:16px;
+  line-height: 2.5ch;
+  color: black;
 }
 
 .tvshow-details {
+  cursor: pointer;
   position: relative;
 }
 
 .episode-name {
   font-size: 20px;
-  color: #fff;
+  color: black;
   font-weight: bold;
-  font-family: Helvetica;
-  text-shadow: 0 1px 0 #ccc;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.season-ep {
+  font-size: 24px;
+  color: rgb(42, 106, 143);
+  font-weight: bold;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.network-name {
+  position: absolute;
+  font-size: 16px;
+  color: rgb(55, 27, 92);
+  font-weight: bold;
+  font-family: sans-serif;
+  text-align: left;
+  padding: 5px;
+  top: 150px;
+}
+
+.time-date-info {
+  position: absolute;
+  font-size: 16px;
+  color: rgb(55, 27, 92);
+  font-weight: bold;
+  font-family: sans-serif;
+  text-align: right;
+  padding: 5px;
+  top: 200px;
+}
+
+.blank-page {
+  background: linear-gradient(to bottom right, rgb(243, 0, 0), rgb(62, 162, 255));
+  font-size: 50px;
+  text-align: center;
 }
