@@ -1,7 +1,6 @@
 import React from 'react';
 import './App.css';
 import Gallery from './Gallery'
-import './Gallery.css';
 
 class App extends React.Component
 {
@@ -60,7 +59,7 @@ class App extends React.Component
   render() {
     let fs = this.sortShows();
     return (
-      <div>
+      <div className="App">
         <div align="middle">
           <header className="App-header">
           <br></br>
@@ -74,7 +73,9 @@ class App extends React.Component
             <br></br>
           </header>
         </div>
-        <Gallery shows={fs} /> 
+        <div>
+          <Gallery shows={fs} />
+        </div>        
       </div>
     );
   }

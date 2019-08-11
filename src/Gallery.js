@@ -1,4 +1,5 @@
 import React from 'react';
+import './Gallery.css';
 
 class Gallery extends React.Component {
   constructor(props) {
@@ -15,6 +16,9 @@ class Gallery extends React.Component {
     let network = (show_info.show.network === null) ? show_info.show.webChannel.name : show_info.show.network.name;
     let airtime = show_info.airtime;
     let season = show_info.season;
+    // 'airdate' would refer to the date. Under 'schedule' endpoint, only daily shows are displayed
+    // so, airdate would be Today for all.
+
     return (
       <div className="tvshow-data" onClick={(e) => this.thumbnailShowClicked(e, show_info.url)}>
         <div className="poster">
@@ -58,9 +62,8 @@ class Gallery extends React.Component {
                 </div>
               )
     }
-    // TODO : The screen breaks up into many blue rectangles but should be one gradient color instead.
-    return (<div className="blank-page"><text>No shows found :(</text></div>);
-    }
+    return (<div className="blank-page"><text><strong>No shows found :(</strong></text></div>);
+  }
 }
 
 export default Gallery;
