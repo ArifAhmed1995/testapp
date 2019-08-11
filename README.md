@@ -2,7 +2,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ### Description
 
-Extracts TV shows data from TVMaze database using their publicly provided API.  
-Work in progress.  
+Extracts daily TV shows data from TVMaze database using their publicly provided API.  
 
-Use `yarn start` to use for now.
+Hosted on Heroku : (https://tvmaze-today.herokuapp.com/)[https://tvmaze-today.herokuapp.com/]
