@@ -6,7 +6,7 @@
   top: 0;
   font-family: helvetica;
   font-size: 100%;
-  background: linear-gradient(to bottom right, rgb(161, 224, 243), rgb(7, 87, 161));
+  background: linear-gradient(to bottom right, rgb(134, 158, 165), rgb(7, 87, 161));
 }
 
 .input-textbox {
@@ -29,4 +29,6 @@
   align-items: center;
   background-color: #09882949;
   height: 70px;
+  width: 100%;
+  position: fixed;
 }

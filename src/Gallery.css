@@ -9,6 +9,7 @@ html {
   flex-wrap: wrap;
   row-gap: 20px;
   justify-content: space-evenly;
+  background: linear-gradient(to bottom right, rgb(161, 224, 243), rgb(7, 87, 161));
 }
 
 .poster {
@@ -76,4 +77,5 @@ html {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 50px;
   text-align: center;
+  -webkit-text-fill-color: brown;
 }
