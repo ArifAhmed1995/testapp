@@ -4,4 +4,4 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Extracts daily TV shows data from TVMaze database using their publicly provided API.  
 
-Hosted on Heroku : (https://tvmaze-today.herokuapp.com/)[https://tvmaze-today.herokuapp.com/]
+Hosted on Heroku : [tvmaze-today](https://tvmaze-today.herokuapp.com/)
