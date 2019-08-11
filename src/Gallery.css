@@ -76,6 +76,9 @@ html {
   height: 100%;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 50px;
+  position: relative;
   text-align: center;
-  -webkit-text-fill-color: brown;
+  vertical-align: middle;
+  line-height: 290px; 
+  -webkit-text-fill-color: rgb(87, 26, 26);
 }
